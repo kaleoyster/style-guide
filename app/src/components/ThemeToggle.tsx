@@ -5,7 +5,7 @@ function subscribe(onChange: () => void) {
   const observer = new MutationObserver(onChange);
   observer.observe(document.documentElement, {
     attributes: true,
-    attributeFilter: ["data-kiewit-theme"],
+    attributeFilter: ["data-sg-theme"],
   });
   return () => observer.disconnect();
 }

@@ -5,7 +5,7 @@
 .header {
   margin-bottom: var(--space-6);
   padding-bottom: var(--space-4);
-  border-bottom: 1px solid var(--kiewit-border);
+  border-bottom: 1px solid var(--brand-border);
 }
 
 .lead {
@@ -49,7 +49,7 @@
 }
 
 .nav a:hover {
-  border-color: var(--kiewit-border);
+  border-color: var(--brand-border);
   background: var(--kw-panel-elevated);
 }
 
@@ -76,7 +76,7 @@
 .swatch {
   border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid var(--kiewit-border);
+  border: 1px solid var(--brand-border);
   background: var(--kw-panel-elevated);
 }
 
@@ -121,7 +121,7 @@
 .typeSample {
   margin-bottom: var(--space-4);
   padding-bottom: var(--space-4);
-  border-bottom: 1px solid var(--kiewit-border);
+  border-bottom: 1px solid var(--brand-border);
 }
 
 .typeSample:last-child {

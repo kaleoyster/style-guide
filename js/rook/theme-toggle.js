@@ -1,12 +1,12 @@
-const STORAGE_KEY = "sw-kiewit-theme";
+const STORAGE_KEY = "sw-sg-theme";
 
 export function getTheme() {
-  return document.documentElement.getAttribute("data-kiewit-theme") === "light" ? "light" : "dark";
+  return document.documentElement.getAttribute("data-sg-theme") === "light" ? "light" : "dark";
 }
 
 export function setTheme(theme) {
   const next = theme === "light" ? "light" : "dark";
-  document.documentElement.setAttribute("data-kiewit-theme", next);
+  document.documentElement.setAttribute("data-sg-theme", next);
   localStorage.setItem(STORAGE_KEY, next);
   syncToggleButton();
 }
@@ -51,11 +51,11 @@ export function initThemeToggle() {
 export const themeInitScript = `(function(){
   var K="${STORAGE_KEY}";
   function apply(t){
-    document.documentElement.setAttribute("data-kiewit-theme",t==="light"?"light":"dark");
+    document.documentElement.setAttribute("data-sg-theme",t==="light"?"light":"dark");
     try{localStorage.setItem(K,t==="light"?"light":"dark");}catch(e){}
   }
   function sync(btn){
-    var light=document.documentElement.getAttribute("data-kiewit-theme")==="light";
+    var light=document.documentElement.getAttribute("data-sg-theme")==="light";
     btn.setAttribute("aria-pressed",light?"true":"false");
     btn.textContent=light?"Dark":"Light";
     btn.title=light?"Switch to dark theme":"Switch to light theme";
@@ -67,7 +67,7 @@ export const themeInitScript = `(function(){
     btn.type="button";
     btn.className="kw-theme-toggle";
     btn.addEventListener("click",function(){
-      apply(document.documentElement.getAttribute("data-kiewit-theme")==="light"?"dark":"light");
+      apply(document.documentElement.getAttribute("data-sg-theme")==="light"?"dark":"light");
       sync(btn);
     });
     document.body.appendChild(btn);

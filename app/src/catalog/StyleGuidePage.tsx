@@ -10,21 +10,21 @@ type Swatch = {
 };
 
 const brandSwatches: Swatch[] = [
-  { name: "Kiewit yellow", var: "--kiewit-yellow", background: "var(--kiewit-yellow)", foreground: "#111" },
-  { name: "Black", var: "--kiewit-black", background: "var(--kiewit-black)" },
-  { name: "Dark gray", var: "--kiewit-dark-gray", background: "var(--kiewit-dark-gray)" },
-  { name: "Medium gray", var: "--kiewit-medium-gray", background: "var(--kiewit-medium-gray)" },
-  { name: "Red", var: "--kiewit-red", background: "var(--kiewit-red)" },
-  { name: "Orange", var: "--kiewit-orange", background: "var(--kiewit-orange)", foreground: "#111" },
-  { name: "Blue", var: "--kiewit-blue", background: "var(--kiewit-blue)" },
-  { name: "Green", var: "--kiewit-green", background: "var(--kiewit-green)" },
+  { name: "Brand yellow", var: "--brand-yellow", background: "var(--brand-yellow)", foreground: "#111" },
+  { name: "Black", var: "--brand-black", background: "var(--brand-black)" },
+  { name: "Dark gray", var: "--brand-dark-gray", background: "var(--brand-dark-gray)" },
+  { name: "Medium gray", var: "--brand-medium-gray", background: "var(--brand-medium-gray)" },
+  { name: "Red", var: "--brand-red", background: "var(--brand-red)" },
+  { name: "Orange", var: "--brand-orange", background: "var(--brand-orange)", foreground: "#111" },
+  { name: "Blue", var: "--brand-blue", background: "var(--brand-blue)" },
+  { name: "Green", var: "--brand-green", background: "var(--brand-green)" },
 ];
 
 const surfaceSwatches: Swatch[] = [
   { name: "Page", var: "--kw-page", background: "var(--kw-page)" },
   { name: "Panel", var: "--kw-panel", background: "var(--kw-panel)" },
   { name: "Panel elevated", var: "--kw-panel-elevated", background: "var(--kw-panel-elevated)" },
-  { name: "Border", var: "--kiewit-border", background: "var(--kiewit-border)" },
+  { name: "Border", var: "--brand-border", background: "var(--brand-border)" },
 ];
 
 const portableSwatches: Swatch[] = [
@@ -99,7 +99,7 @@ export function StyleGuidePage() {
       <header className={styles.header}>
         <h1>Style guide catalog</h1>
         <p className={styles.lead}>
-          Living reference for the Kiewit / Rook theme: tokens, light and dark surfaces, and shared UI
+          Living reference for the Rook theme: tokens, light and dark surfaces, and shared UI
           patterns. Observable sites and Vite apps should pull from the same <code>style-guide</code>{" "}
           package.
         </p>
@@ -117,7 +117,7 @@ export function StyleGuidePage() {
           <CatalogSection
             id="themes"
             title="Themes"
-            description='Dark is default. Light mode uses html[data-kiewit-theme="light"] — toggle with the button above (same storage key as Rook).'
+            description='Dark is default. Light mode uses html[data-sg-theme="light"] — toggle with the button above (same storage key as Rook).'
           >
             <div className={styles.row}>
               <span className="status-info">Info</span>
@@ -158,7 +158,7 @@ export function StyleGuidePage() {
             </p>
           </CatalogSection>
 
-          <CatalogSection id="buttons" title="Buttons" description="Classes from kiewit-theme.css — use in HTML or className in React.">
+          <CatalogSection id="buttons" title="Buttons" description="Classes from brand-theme.css — use in HTML or className in React.">
             <div className={styles.row}>
               <button type="button" className="btn-primary">Primary</button>
               <button type="button" className="btn-secondary">Secondary</button>

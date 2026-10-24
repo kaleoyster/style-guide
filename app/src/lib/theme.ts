@@ -1,9 +1,9 @@
-const STORAGE_KEY = "sw-kiewit-theme";
+const STORAGE_KEY = "sw-sg-theme";
 
 export type ThemeMode = "light" | "dark";
 
 export function getTheme(): ThemeMode {
-  return document.documentElement.getAttribute("data-kiewit-theme") === "light"
+  return document.documentElement.getAttribute("data-sg-theme") === "light"
     ? "light"
     : "dark";
 }
@@ -11,9 +11,9 @@ export function getTheme(): ThemeMode {
 export function setTheme(theme: ThemeMode) {
   const next = theme === "light" ? "light" : "dark";
   if (next === "light") {
-    document.documentElement.setAttribute("data-kiewit-theme", "light");
+    document.documentElement.setAttribute("data-sg-theme", "light");
   } else {
-    document.documentElement.removeAttribute("data-kiewit-theme");
+    document.documentElement.removeAttribute("data-sg-theme");
   }
   try {
     localStorage.setItem(STORAGE_KEY, next);

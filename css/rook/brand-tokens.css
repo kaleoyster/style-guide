@@ -1,4 +1,4 @@
-/* Kiewit / Rook design tokens (dark defaults). Light overrides: kiewit-theme-light.css */
+/* Rook design tokens (dark defaults). Light overrides: brand-theme-light.css */
 
 :root {
     /* Professional Sans-Serif Font Stack */
@@ -8,37 +8,37 @@
     --monospace:
         "SF Mono", "Monaco", "Inconsolata", "Fira Code", "Dank Mono",
         "Source Code Pro", monospace;
-    /* Kiewit Brand Colors */
-    --kiewit-yellow: #ffd200;
-    --kiewit-dark-gray: #2c2c2c;
-    --kiewit-medium-gray: #5a6670;
-    --kiewit-light-gray: #e5e5e5;
-    --kiewit-black: #1a1a1a;
-    --kiewit-white: #ffffff;
+    /* Brand Colors */
+    --brand-yellow: #ffd200;
+    --brand-dark-gray: #2c2c2c;
+    --brand-medium-gray: #5a6670;
+    --brand-light-gray: #e5e5e5;
+    --brand-black: #1a1a1a;
+    --brand-white: #ffffff;
 
     /* Dark Theme Colors */
-    --kiewit-bg-primary: #0f0f0f;
-    --kiewit-border: #2a2a2a;
+    --brand-bg-primary: #0f0f0f;
+    --brand-border: #2a2a2a;
 
-    /* Accent Colors - Kiewit Palette Complementary */
-    --kiewit-red: #c41e3a;
-    --kiewit-orange: #ff8c00;
-    --kiewit-blue: #1e3a8a;
-    --kiewit-green: #2d5016;
-    --kiewit-purple: #4a1e5c;
-    --kiewit-gold: #c9a227;
+    /* Accent Colors - brand palette Complementary */
+    --brand-red: #c41e3a;
+    --brand-orange: #ff8c00;
+    --brand-blue: #1e3a8a;
+    --brand-green: #2d5016;
+    --brand-purple: #4a1e5c;
+    --brand-gold: #c9a227;
 
     /* Risk bands — yellow through neutral contrast steps; shared by dashboard + analysis */
-    --kiewit-risk-very-low: #ffd200;
-    --kiewit-risk-very-low-fg: #111;
-    --kiewit-risk-low: #d6d6d6;
-    --kiewit-risk-low-fg: #111;
-    --kiewit-risk-medium: #8a8a8a;
-    --kiewit-risk-medium-fg: #fff;
-    --kiewit-risk-high: #4a4a4a;
-    --kiewit-risk-high-fg: #fff;
-    --kiewit-risk-very-high: #f5f5f5;
-    --kiewit-risk-very-high-fg: #111;
+    --brand-risk-very-low: #ffd200;
+    --brand-risk-very-low-fg: #111;
+    --brand-risk-low: #d6d6d6;
+    --brand-risk-low-fg: #111;
+    --brand-risk-medium: #8a8a8a;
+    --brand-risk-medium-fg: #fff;
+    --brand-risk-high: #4a4a4a;
+    --brand-risk-high-fg: #fff;
+    --brand-risk-very-high: #f5f5f5;
+    --brand-risk-very-high-fg: #111;
     --sw-risk-very_high-bg: #f5f5f5;
     --sw-risk-very_high-fg: #111;
     --sw-risk-very_high-border: #ffffff;
@@ -59,28 +59,28 @@
     --sw-risk-na-border: #444444;
 
     /* Outcome bars (correct / missed) */
-    --kiewit-outcome-ok: #ffd200;
-    --kiewit-outcome-ok-fg: #111;
-    --kiewit-outcome-miss: #737373;
-    --kiewit-outcome-miss-fg: #fff;
+    --brand-outcome-ok: #ffd200;
+    --brand-outcome-ok-fg: #111;
+    --brand-outcome-miss: #737373;
+    --brand-outcome-miss-fg: #fff;
 
     /* Observable Framework Theme Variables */
-    --theme-foreground: var(--kiewit-white);
-    --theme-background: var(--kiewit-bg-primary);
-    --theme-background-alt: var(--kiewit-bg-primary);
+    --theme-foreground: var(--brand-white);
+    --theme-background: var(--brand-bg-primary);
+    --theme-background-alt: var(--brand-bg-primary);
     --theme-foreground-alt: rgba(255, 255, 255, 0.7);
     --theme-foreground-muted: rgba(255, 255, 255, 0.5);
     --theme-foreground-faint: rgba(255, 255, 255, 0.1);
     --theme-foreground-fainter: rgba(255, 255, 255, 0.05);
-    --theme-foreground-focus: var(--kiewit-yellow);
+    --theme-foreground-focus: var(--brand-yellow);
 
     /* Text Colors */
-    --theme-text: var(--kiewit-white);
+    --theme-text: var(--brand-white);
     --theme-text-muted: rgba(255, 255, 255, 0.6);
 
     /* Brand Accent */
-    --brand-primary: var(--kiewit-yellow);
-    --brand-secondary: var(--kiewit-dark-gray);
+    --brand-primary: var(--brand-yellow);
+    --brand-secondary: var(--brand-dark-gray);
 
     /* Semantic surfaces — dark default; overridden in light theme */
     --kw-page: #0f0f0f;
@@ -93,11 +93,11 @@
     --kw-text-subtle: rgba(255, 255, 255, 0.45);
     --kw-text-faint: rgba(255, 255, 255, 0.4);
     --kw-chip-border: #3a3a3a;
-    --kw-link: var(--kiewit-yellow);
+    --kw-link: var(--brand-yellow);
     --sw-analysis-panel: var(--kw-panel-elevated);
     --sw-analysis-inset: var(--kw-page);
 
-    /* Analysis chart palette — Kiewit yellow plus neutral contrast steps */
+    /* Analysis chart palette — Brand yellow plus neutral contrast steps */
     --kw-chart-accent: #ffd200;
     --kw-chart-accent-soft: rgba(255, 210, 0, 0.22);
     --kw-chart-ink: #f5f5f5;
@@ -129,7 +129,7 @@
     --ag-cell-text: rgba(255, 255, 255, 0.85);
     --ag-header-text: rgba(255, 255, 255, 0.45);
     --ag-header-text-hover: rgba(255, 255, 255, 0.8);
-    --ag-cell-code: var(--kiewit-yellow);
+    --ag-cell-code: var(--brand-yellow);
     --ag-cell-name: rgba(255, 255, 255, 0.88);
     --ag-cell-kpi: rgba(255, 255, 255, 0.92);
     --ag-cell-muted: rgba(255, 255, 255, 0.45);

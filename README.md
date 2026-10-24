@@ -1,13 +1,15 @@
 # Style guide
 
+Central repository for shared **design tokens**, **components**, **patterns**, and the **Rook** theme used across Observable and Vite apps.
+
 **Repository:** [github.com/kaleoyster/style-guide](https://github.com/kaleoyster/style-guide)
 
-Shared **design tokens** (CSS variables), **JSON tokens**, and **markdown** documentation. The **Rook / Kiewit** theme (`css/rook/`) is the canonical brand source; the Rook Observable app syncs it on `npm install` (see [docs/theme-rook.md](docs/theme-rook.md)).
+Shared **design tokens** (CSS variables), **JSON tokens**, and **markdown** documentation. The **Rook** theme (`css/rook/`) is the canonical brand source; the Rook Observable app syncs it on `npm install` (see [docs/theme-rook.md](docs/theme-rook.md)).
 
 ## Contents
 
-- `css/rook/` — Kiewit theme (Observable + tokens)
-- `css/variables.css` — portable tokens for Vite/React (`--color-primary` → Kiewit yellow)
+- `css/rook/` — brand theme (Observable + tokens)
+- `css/variables.css` — portable tokens for Vite/React (`--color-primary` → brand yellow)
 - `tokens/colors.json` — brand palette for tooling
 - `docs/` — color and component specs
 - `demo/index.html` — static preview (open in a browser)
@@ -65,7 +67,7 @@ Read `docs/colors.md`, [docs/theme-rook.md](docs/theme-rook.md), and `docs/compo
 
 ## Roadmap
 
-- [x] Rook / Kiewit theme in `css/rook/`
+- [x] Rook theme in `css/rook/`
 - [x] Primary / brand tokens (CSS + JSON)
 - [x] Markdown: colors, model card
 - [x] HTML demo
@@ -79,10 +81,10 @@ Read `docs/colors.md`, [docs/theme-rook.md](docs/theme-rook.md), and `docs/compo
 | ------ | ---- |
 | `style-guide/variables.css` | `css/variables.css` (Vite/React) |
 | `style-guide/rook-observable.css` | Full Observable theme bundle |
-| `style-guide/rook/kiewit-theme.css` | Dark theme + components |
+| `style-guide/rook/brand-theme.css` | Dark theme + components |
 | `style-guide/tokens/colors.json` | `tokens/colors.json` |
 
-Edit tokens in `css/rook/kiewit-tokens.css`; keep portable alias names in `variables.css` stable.
+Edit tokens in `css/rook/brand-tokens.css`; keep portable alias names in `variables.css` stable.
 
 ## Workflow
 

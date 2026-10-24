@@ -3,14 +3,14 @@
  * Canonical brand theme: css/rook/ (from the Rook Observable project).
  */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
-@import "./rook/kiewit-tokens.css";
+@import "./rook/brand-tokens.css";
 
 :root {
-  /* Cross-framework aliases (map generic names → Kiewit tokens) */
-  --color-primary: var(--kiewit-yellow);
+  /* Cross-framework aliases (map generic names → Rook brand tokens) */
+  --color-primary: var(--brand-yellow);
   --color-primary-hover: #fbbf24;
   --color-primary-muted: rgba(255, 210, 0, 0.22);
-  --color-primary-fg: var(--kiewit-black);
+  --color-primary-fg: var(--brand-black);
 
   --font-family-sans: var(--sans-serif);
   --font-family-mono: var(--monospace);
@@ -32,5 +32,5 @@
   --color-text: var(--kw-text);
   --color-text-muted: var(--kw-text-muted);
   --color-link: var(--kw-link);
-  --color-border: var(--kiewit-border);
+  --color-border: var(--brand-border);
 }
