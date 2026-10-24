@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background: var(--kw-page);
+}
+
+#root {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4);
+}
+
+/* Catalog: in-header toggle (theme also defines fixed floating .kw-theme-toggle) */
+.sg-theme-toggle {
+  position: static;
+  box-shadow: none;
+  margin-top: var(--space-3);
+}

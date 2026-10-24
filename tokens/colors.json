@@ -1,0 +1,28 @@
+{
+  "brand": {
+    "yellow": "#ffd200",
+    "black": "#1a1a1a",
+    "white": "#ffffff",
+    "darkGray": "#2c2c2c",
+    "mediumGray": "#5a6670",
+    "lightGray": "#e5e5e5"
+  },
+  "accent": {
+    "red": "#c41e3a",
+    "orange": "#ff8c00",
+    "blue": "#1e3a8a",
+    "green": "#2d5016",
+    "purple": "#4a1e5c",
+    "gold": "#c9a227"
+  },
+  "primary": {
+    "default": "#ffd200",
+    "hover": "#fbbf24",
+    "foreground": "#1a1a1a"
+  },
+  "surface": {
+    "pageDark": "#0f0f0f",
+    "panelDark": "#161616",
+    "borderDark": "#2a2a2a"
+  }
+}

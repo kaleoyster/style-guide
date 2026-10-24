@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Style guide demo</title>
+    <link rel="stylesheet" href="../css/variables.css" />
+    <style>
+      body {
+        font-family: var(--font-family-sans);
+        line-height: var(--line-height-base);
+        margin: var(--space-8);
+        color: var(--kw-text);
+        background: var(--kw-page);
+      }
+
+      .swatches {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+        margin: var(--space-4) 0 var(--space-8);
+      }
+
+      .swatch {
+        width: 4rem;
+        height: 4rem;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .model-card {
+        padding: var(--space-4);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        max-width: 20rem;
+        background: var(--kw-panel-elevated);
+        border: 1px solid var(--kiewit-border);
+      }
+
+      .model-card h2 {
+        margin: 0 0 var(--space-2);
+        font-size: 1.125rem;
+      }
+
+      .model-card p {
+        margin: 0 0 var(--space-3);
+        color: var(--kw-text-muted);
+      }
+
+      .model-card a {
+        color: var(--color-primary);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .model-card a:hover {
+        color: var(--color-primary-hover);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Style guide</h1>
+    <p>Primary palette (CSS variables from this package):</p>
+    <div class="swatches" aria-hidden="true">
+      <div class="swatch" style="background: var(--kiewit-yellow)"></div>
+      <div class="swatch" style="background: var(--kiewit-dark-gray)"></div>
+      <div class="swatch" style="background: var(--kw-chart-neutral-2)"></div>
+      <div class="swatch" style="background: var(--kw-page); border: 1px solid var(--kiewit-border)"></div>
+    </div>
+
+    <h2>Model card</h2>
+    <article class="model-card">
+      <h2>Example model</h2>
+      <p>Short description of what this model does.</p>
+      <a href="#">Open application</a>
+    </article>
+  </body>
+</html>

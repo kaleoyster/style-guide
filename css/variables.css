@@ -1,0 +1,36 @@
+/**
+ * Portable design tokens for Vite, React, and other apps.
+ * Canonical brand theme: css/rook/ (from the Rook Observable project).
+ */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+@import "./rook/kiewit-tokens.css";
+
+:root {
+  /* Cross-framework aliases (map generic names → Kiewit tokens) */
+  --color-primary: var(--kiewit-yellow);
+  --color-primary-hover: #fbbf24;
+  --color-primary-muted: rgba(255, 210, 0, 0.22);
+  --color-primary-fg: var(--kiewit-black);
+
+  --font-family-sans: var(--sans-serif);
+  --font-family-mono: var(--monospace);
+  --font-size-base: 1rem;
+  --line-height-base: 1.5;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  --radius-md: 0.5rem;
+  --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.06);
+
+  --color-surface: var(--kw-panel);
+  --color-surface-elevated: var(--kw-panel-elevated);
+  --color-text: var(--kw-text);
+  --color-text-muted: var(--kw-text-muted);
+  --color-link: var(--kw-link);
+  --color-border: var(--kiewit-border);
+}

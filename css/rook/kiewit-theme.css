@@ -1,0 +1,364 @@
+/* Import Professional Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+/* Kiewit Brand Theme for Observable Framework - Dark Mode */
+@import "./kiewit-tokens.css";
+
+/* Force black background everywhere */
+body,
+html {
+    background: var(--kw-page) !important;
+    color: var(--kw-text);
+    font-family: var(--sans-serif);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--sans-serif);
+}
+
+code,
+pre {
+    font-family: var(--monospace);
+}
+
+#observablehq-main,
+#observablehq-center,
+.observablehq,
+main {
+    background: var(--kw-page) !important;
+}
+
+/* Dark Mode Support (optional) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-foreground: var(--kiewit-white);
+        --theme-background: var(--kiewit-dark-gray);
+        --theme-background-alt: var(--kiewit-black);
+        --theme-foreground-alt: var(--kiewit-light-gray);
+        --theme-foreground-muted: var(--kiewit-medium-gray);
+        --theme-foreground-faint: rgba(247, 209, 23, 0.1);
+        --theme-foreground-fainter: rgba(247, 209, 23, 0.05);
+    }
+}
+
+/* Kiewit Header Bar */
+.kiewit-header {
+    background: var(--kiewit-bg-primary);
+    color: var(--kiewit-white);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--kiewit-border);
+}
+
+.kiewit-logo {
+    height: 40px;
+    width: auto;
+}
+
+.kiewit-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.kiewit-nav a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.kiewit-nav a:hover {
+    color: var(--kiewit-yellow);
+    border-bottom-color: var(--kiewit-yellow);
+}
+
+/* Footer */
+.kiewit-footer {
+    background: var(--kiewit-bg-primary);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid var(--kiewit-border);
+    font-size: 0.9rem;
+}
+
+.kiewit-footer-bottom {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 1rem 0;
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    border-top: 1px solid var(--kiewit-border);
+}
+
+/* Footer text styling */
+footer p,
+footer {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.875rem;
+}
+
+/* Cards with Kiewit styling */
+.card {
+    border: 1px solid var(--kiewit-border);
+    border-radius: 8px;
+    transition: all 0.2s;
+    padding: 1.5rem;
+    background: transparent;
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--kiewit-yellow);
+    color: var(--kiewit-black);
+    border: 2px solid var(--kiewit-yellow);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    background: #fbbf24;
+    border-color: #fbbf24;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(247, 209, 23, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--kiewit-white);
+    border: 2px solid var(--kiewit-border);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--kiewit-yellow);
+    color: var(--kiewit-yellow);
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 1px var(--kiewit-yellow);
+}
+
+/* Links */
+a {
+    color: var(--kw-link);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+a:hover {
+    border-bottom-color: var(--kw-link);
+}
+
+/* Observable wraps heading text in anchor links — don't double-underline */
+h1 a.observablehq-header-anchor,
+h2 a.observablehq-header-anchor,
+h3 a.observablehq-header-anchor,
+h4 a.observablehq-header-anchor,
+h5 a.observablehq-header-anchor,
+h6 a.observablehq-header-anchor {
+    color: inherit;
+    border-bottom: none;
+    text-decoration: none;
+}
+
+h1 a.observablehq-header-anchor:hover,
+h2 a.observablehq-header-anchor:hover,
+h3 a.observablehq-header-anchor:hover,
+h4 a.observablehq-header-anchor:hover,
+h5 a.observablehq-header-anchor:hover,
+h6 a.observablehq-header-anchor:hover {
+    color: inherit;
+    border-bottom: none;
+}
+
+/* Headings with clear hierarchy */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--sans-serif);
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+h1 {
+    border-bottom: none;
+    padding-bottom: 0;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--kw-text);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--kw-text);
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--kw-text);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-left: 0.75rem;
+    border-left: 3px solid var(--kiewit-yellow);
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.95rem;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h6 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Body text for contrast */
+p {
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    color: var(--kw-text-muted);
+    font-size: 1rem;
+}
+
+/* Accent Bar */
+.kiewit-accent-bar {
+    height: 3px;
+    background: linear-gradient(90deg, var(--kiewit-yellow), #fbbf24);
+    width: 60px;
+    margin: 0.75rem 0;
+    border-radius: 2px;
+}
+
+/* Status Indicators with Kiewit colors */
+.status-success {
+    color: var(--kiewit-green);
+}
+
+.status-warning {
+    color: var(--kiewit-orange);
+}
+
+.status-error {
+    color: var(--kiewit-red);
+}
+
+.status-info {
+    color: var(--kiewit-blue);
+}
+
+/* Page Navigation (Pager) Styling - Card Style */
+.observablehq-pager,
+footer nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-top: 3rem;
+    margin-top: 4rem;
+    border-top: 1px solid var(--kiewit-border);
+}
+
+.observablehq-pager a,
+footer nav a {
+    color: var(--kw-text) !important;
+    text-decoration: none;
+    padding: 1.5rem;
+    border: 1px solid var(--kiewit-border);
+    border-radius: 8px;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: transparent;
+    min-width: 200px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    opacity: 1;
+}
+
+.observablehq-pager a:hover,
+footer nav a:hover {
+    border-color: var(--kiewit-yellow);
+    box-shadow: 0 0 0 1px var(--kiewit-yellow);
+    transform: translateY(-2px);
+    background: rgba(247, 209, 23, 0.05);
+}
+
+.observablehq-pager a:hover span,
+footer nav a:hover span {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.observablehq-pager span,
+footer nav span {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin: 0;
+}
+
+/* Remove float, use flexbox instead */
+.observablehq-pager a[rel="next"],
+footer nav a[rel="next"] {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.observablehq-pager a[rel="prev"],
+footer nav a[rel="prev"] {
+    text-align: left;
+    align-items: flex-start;
+}
