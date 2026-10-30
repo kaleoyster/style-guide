@@ -1,0 +1,35 @@
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: flex-end;
+  margin-top: var(--space-3);
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+  min-width: min(100%, 14rem);
+}
+
+.label {
+  font: 600 0.62rem ui-monospace, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--nbi-muted, var(--color-text-muted));
+}
+
+.select {
+  font: 500 0.85rem var(--font-family-sans, system-ui, sans-serif);
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--nbi-line, var(--color-border));
+  background: var(--nbi-white, var(--color-surface));
+  color: var(--nbi-ink, var(--color-text));
+}
+
+.hint {
+  flex: 1 1 100%;
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--nbi-muted, var(--color-text-muted));
+}

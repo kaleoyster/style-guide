@@ -1,0 +1,30 @@
+/**
+ * Maps legacy Rook / style-guide token names to NBI theme variables.
+ * Import after nbi-theme.css so Vite apps and older markup keep working.
+ */
+:root {
+  --brand-yellow: var(--nbi-yellow);
+  --brand-black: var(--nbi-black);
+  --brand-border: var(--nbi-line);
+  --brand-bg-primary: var(--nbi-paper);
+  --brand-white: var(--nbi-ink);
+  --brand-red: var(--nbi-poor);
+  --brand-orange: var(--nbi-fair);
+  --brand-blue: var(--nbi-accent-ink);
+  --brand-green: var(--nbi-good);
+
+  --kw-page: var(--nbi-paper);
+  --kw-panel: var(--nbi-white);
+  --kw-panel-elevated: var(--nbi-white);
+  --kw-text: var(--nbi-ink);
+  --kw-text-muted: var(--nbi-muted);
+  --kw-link: var(--nbi-accent-ink);
+
+  --color-primary: var(--nbi-yellow);
+  --color-primary-fg: var(--nbi-on-yellow);
+  --color-text: var(--nbi-ink);
+  --color-text-muted: var(--nbi-muted);
+  --color-link: var(--nbi-accent-ink);
+  --color-border: var(--nbi-line);
+  --color-surface: var(--nbi-white);
+}

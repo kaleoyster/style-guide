@@ -1,16 +1,21 @@
 /**
  * Portable design tokens for Vite, React, and other apps.
- * Canonical brand theme: css/rook/ (from the Rook Observable project).
+ * Load `nbi/nbi-theme.css` first, then `nbi/token-aliases.css` for legacy `--brand-*` names.
  */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
-@import "./rook/brand-tokens.css";
 
 :root {
-  /* Cross-framework aliases (map generic names → Rook brand tokens) */
-  --color-primary: var(--brand-yellow);
-  --color-primary-hover: #fbbf24;
-  --color-primary-muted: rgba(255, 210, 0, 0.22);
-  --color-primary-fg: var(--brand-black);
+  --sans-serif:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  --monospace:
+    "SF Mono", "Monaco", "Inconsolata", "Fira Code", "Source Code Pro", monospace;
+
+  /* Portable colors — resolve once theme CSS (NBI or Rook) is loaded */
+  --color-primary: var(--nbi-yellow, var(--brand-yellow, #ffd200));
+  --color-primary-fg: var(--nbi-on-yellow, var(--brand-black, #111));
+  --color-primary-hover: var(--viz-yellow-40, var(--nbi-yellow, #ffda3d));
+  --color-primary-muted: color-mix(in srgb, var(--color-primary) 22%, transparent);
 
   --font-family-sans: var(--sans-serif);
   --font-family-mono: var(--monospace);
@@ -27,10 +32,10 @@
   --radius-md: 0.5rem;
   --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.06);
 
-  --color-surface: var(--kw-panel);
-  --color-surface-elevated: var(--kw-panel-elevated);
-  --color-text: var(--kw-text);
-  --color-text-muted: var(--kw-text-muted);
-  --color-link: var(--kw-link);
-  --color-border: var(--brand-border);
+  --color-surface: var(--nbi-white, #131618);
+  --color-surface-elevated: var(--nbi-white, var(--kw-panel-elevated, #131618));
+  --color-text: var(--nbi-ink, #f7f4e9);
+  --color-text-muted: var(--nbi-muted, #a4a9a8);
+  --color-link: var(--nbi-accent-ink, #ffd200);
+  --color-border: var(--nbi-line, #34383a);
 }

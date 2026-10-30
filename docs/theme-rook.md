@@ -1,6 +1,8 @@
-# Rook theme
+# Rook theme (legacy)
 
-The **canonical theme** from the **Rook** Observable Framework project lives in this package under `css/rook/`. Rook syncs these files into `src/lib/` on install so Observable can keep serving them from `./lib/`.
+> **New work:** use the NBI Rook theme in [theme-nbi.md](theme-nbi.md) (`css/nbi/`, `data-nbi-theme`). This document covers the older split theme under `css/rook/` and `data-sg-theme`.
+
+The **legacy split theme** from early Rook Observable projects lives in this package under `css/rook/`.
 
 ## Files
 

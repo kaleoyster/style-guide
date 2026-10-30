@@ -1,0 +1,5 @@
+/**
+ * Full NBI Rook theme for Observable Framework (single link in observablehq.config head).
+ * Source: nbi-rook src/lib/nbi-theme.css — edit css/nbi/nbi-theme.css in this package.
+ */
+@import url("./nbi/nbi-theme.css");

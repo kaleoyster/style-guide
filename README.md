@@ -4,14 +4,17 @@ Central repository for shared **design tokens**, **components**, **patterns**, a
 
 **Repository:** [github.com/kaleoyster/style-guide](https://github.com/kaleoyster/style-guide)
 
-Shared **design tokens** (CSS variables), **JSON tokens**, and **markdown** documentation. The **Rook** theme (`css/rook/`) is the canonical brand source; the Rook Observable app syncs it on `npm install` (see [docs/theme-rook.md](docs/theme-rook.md)).
+Shared **design tokens** (CSS variables), **JSON tokens**, and **markdown** documentation. The **NBI Rook** theme (`css/nbi/`) is the canonical light/dark source from the Observable nbi-rook project; legacy Rook split theme remains under `css/rook/` (see [docs/theme-nbi.md](docs/theme-nbi.md) and [docs/theme-rook.md](docs/theme-rook.md)).
 
 ## Contents
 
-- `css/rook/` — brand theme (Observable + tokens)
+- `css/nbi/` — NBI Rook theme (light/dark, Observable + palette)
+- `css/rook/` — legacy brand theme (`data-sg-theme`)
 - `css/variables.css` — portable tokens for Vite/React (`--color-primary` → brand yellow)
 - `tokens/colors.json` — brand palette for tooling
-- `docs/` — color and component specs
+- `tokens/themes.json` — named theme presets (families × light/dark)
+- `js/themes/catalog.js` — same registry for apps and the Vite catalog
+- `docs/` — color, [theme catalog](docs/themes.md), and component specs
 - `demo/index.html` — static preview (open in a browser)
 - `app/` — Vite + React starter (imports this package via workspaces)
 
@@ -30,7 +33,7 @@ npm install
 npm run dev
 ```
 
-Opens a **catalog** page: themes, colors, typography, buttons, model card, risk bands. See [app/README.md](app/README.md).
+Opens a **catalog** page: NBI tokens, palette ramps, typography, layout blocks, patterns, and components. See [app/README.md](app/README.md) and [docs/theme-nbi.md](docs/theme-nbi.md).
 
 ## Use in a project
 

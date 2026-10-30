@@ -23,10 +23,21 @@
   "exports": {
     "./variables.css": "./css/variables.css",
     "./css/variables.css": "./css/variables.css",
+    "./nbi-observable.css": "./css/nbi-observable.css",
+    "./css/nbi/nbi-theme.css": "./css/nbi/nbi-theme.css",
+    "./css/nbi/token-aliases.css": "./css/nbi/token-aliases.css",
+    "./css/nbi/nbi-utilities.css": "./css/nbi/nbi-utilities.css",
+    "./nbi/nbi-theme.css": "./css/nbi/nbi-theme.css",
+    "./nbi/token-aliases.css": "./css/nbi/token-aliases.css",
+    "./nbi/nbi-utilities.css": "./css/nbi/nbi-utilities.css",
     "./rook-observable.css": "./css/rook-observable.css",
     "./rook/brand-tokens.css": "./css/rook/brand-tokens.css",
     "./rook/brand-theme.css": "./css/rook/brand-theme.css",
     "./rook/brand-theme-light.css": "./css/rook/brand-theme-light.css",
+    "./js/nbi/theme-toggle.js": "./js/nbi/theme-toggle.js",
+    "./js/nbi/palette.js": "./js/nbi/palette.js",
+    "./js/themes/catalog.js": "./js/themes/catalog.js",
+    "./tokens/themes.json": "./tokens/themes.json",
     "./js/rook/theme-toggle.js": "./js/rook/theme-toggle.js",
     "./tokens/colors.json": "./tokens/colors.json",
     "./docs/colors.md": "./docs/colors.md",
@@ -34,6 +45,8 @@
     "./docs/workflow.md": "./docs/workflow.md",
     "./docs/contributing-components.md": "./docs/contributing-components.md",
     "./docs/github-template.md": "./docs/github-template.md",
-    "./docs/theme-rook.md": "./docs/theme-rook.md"
+    "./docs/theme-rook.md": "./docs/theme-rook.md",
+    "./docs/theme-nbi.md": "./docs/theme-nbi.md",
+    "./docs/themes.md": "./docs/themes.md"
   }
 }

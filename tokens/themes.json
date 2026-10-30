@@ -1,0 +1,47 @@
+{
+  "presetStorageKey": "sg-theme-preset",
+  "families": [
+    {
+      "id": "nbi-rook",
+      "name": "NBI Rook",
+      "status": "canonical",
+      "htmlHook": "data-nbi-theme",
+      "storageKey": "nbi-rook-theme",
+      "observableBundle": "style-guide/nbi-observable.css"
+    },
+    {
+      "id": "rook-legacy",
+      "name": "Rook Legacy",
+      "status": "legacy",
+      "htmlHook": "data-sg-theme",
+      "storageKey": "sw-sg-theme",
+      "observableBundle": "style-guide/rook-observable.css"
+    }
+  ],
+  "presets": [
+    {
+      "id": "nbi-rook-dark",
+      "label": "NBI Rook · Dark",
+      "familyId": "nbi-rook",
+      "mode": "dark"
+    },
+    {
+      "id": "nbi-rook-light",
+      "label": "NBI Rook · Light",
+      "familyId": "nbi-rook",
+      "mode": "light"
+    },
+    {
+      "id": "rook-legacy-dark",
+      "label": "Rook Legacy · Dark",
+      "familyId": "rook-legacy",
+      "mode": "dark"
+    },
+    {
+      "id": "rook-legacy-light",
+      "label": "Rook Legacy · Light",
+      "familyId": "rook-legacy",
+      "mode": "light"
+    }
+  ]
+}

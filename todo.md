@@ -4,9 +4,9 @@ What’s done, what’s left, and suggested order of work.
 
 ## Already in place
 
-- [x] Canonical Rook theme in this package (`css/rook/`)
-- [x] Rook sync on `npm install` (`file:../style-guide` → `src/lib/`)
-- [x] Vite catalog (`npm run dev`): themes, colors, typography, buttons, model card, risk bands
+- [x] NBI Rook theme in this package (`css/nbi/`, `js/nbi/palette.js`)
+- [x] Legacy Rook split theme (`css/rook/`)
+- [x] Vite catalog (`npm run dev`): full NBI pattern gallery + palette ramps
 - [x] Workflow docs (new project, contribute back)
 - [x] Portable entry `variables.css` for React / Vite
 

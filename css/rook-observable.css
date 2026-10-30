@@ -1,6 +1,6 @@
 /**
- * Full theme bundle for Observable (package root paths).
- * Rook copies a lib-relative variant to src/lib/rook-observable.css via sync script.
+ * Observable theme bundle. Prefer nbi-observable.css for NBI Rook sites.
+ * Legacy split theme (data-sg-theme) retained for older apps:
  */
 @import url("./rook/brand-tokens.css");
 @import url("./rook/brand-theme.css");

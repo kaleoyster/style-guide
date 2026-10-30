@@ -2,14 +2,14 @@ body {
   margin: 0;
   font-family: var(--font-family-sans);
   line-height: var(--line-height-base);
-  color: var(--color-text);
-  background: var(--kw-page);
+  color: var(--nbi-ink);
+  background: var(--nbi-paper);
 }
 
 #root {
-  max-width: 56rem;
+  max-width: 90rem;
   margin: 0 auto;
-  padding: var(--space-8) var(--space-4);
+  padding: var(--space-8) clamp(var(--space-4), 3vw, 3rem);
 }
 
 /* Catalog: in-header toggle (theme also defines fixed floating .kw-theme-toggle) */

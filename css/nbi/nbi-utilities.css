@@ -1,0 +1,90 @@
+/**
+ * Shared controls for the catalog and apps that do not use Observable chrome.
+ */
+.btn-primary,
+.btn-secondary {
+  font: 600 0.75rem var(--sans-serif, ui-sans-serif, system-ui, sans-serif);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.1rem;
+  border: 1px solid var(--nbi-line);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--nbi-yellow);
+  color: var(--nbi-on-yellow);
+  border-color: var(--nbi-yellow);
+}
+
+.btn-primary:hover {
+  background: var(--viz-yellow-40, #ffda3d);
+  border-color: var(--viz-yellow-40, #ffda3d);
+}
+
+.btn-secondary {
+  background: var(--nbi-white);
+  color: var(--nbi-ink);
+}
+
+.btn-secondary:hover {
+  border-color: var(--nbi-accent-line);
+  color: var(--nbi-accent-ink);
+}
+
+.card {
+  padding: 1.25rem 1.5rem;
+  background: var(--nbi-white);
+  border: 1px solid var(--nbi-line);
+  color: var(--nbi-ink);
+}
+
+.card a {
+  color: var(--nbi-accent-ink);
+  font-weight: 600;
+}
+
+.card a:hover {
+  color: var(--nbi-yellow);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.status-success {
+  color: var(--nbi-good);
+}
+
+.status-warning {
+  color: var(--nbi-fair);
+}
+
+.status-error {
+  color: var(--nbi-poor);
+}
+
+.status-info {
+  color: var(--nbi-accent-ink);
+}
+
+.catalog-prose h1,
+.catalog-prose h2,
+.catalog-prose h3,
+.catalog-prose h4 {
+  letter-spacing: -0.03em;
+}
+
+.catalog-prose h3 {
+  border-left: 3px solid var(--nbi-yellow);
+  padding-left: 0.65rem;
+  margin-top: 1.75rem;
+}
+
+.catalog-prose h4 {
+  font: 600 0.68rem ui-monospace, monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--nbi-muted);
+}

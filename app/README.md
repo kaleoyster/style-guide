@@ -1,6 +1,6 @@
 # Application starter (`app/`)
 
-Vite + React **style guide catalog** — previews tokens, light/dark theme, and shared components. Consumes the root **`style-guide`** package via npm workspaces.
+Vite + React **style guide catalog** — previews the full **NBI Rook** light/dark theme, chart palette, and `.nbi-*` patterns from `css/nbi/`. Consumes the root **`style-guide`** package via npm workspaces.
 
 ## Run
 
