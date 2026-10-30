@@ -1,6 +1,7 @@
 /**
- * Full Rook theme for Observable Framework sites.
- * Import after Observable base styles; pair with js/rook/theme-toggle.js in head.
+ * Full theme bundle for Observable (package root paths).
+ * Rook copies a lib-relative variant to src/lib/rook-observable.css via sync script.
  */
+@import url("./rook/brand-tokens.css");
 @import url("./rook/brand-theme.css");
 @import url("./rook/brand-theme-light.css");

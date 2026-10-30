@@ -1,14 +1,31 @@
 const STORAGE_KEY = "sw-sg-theme";
+const LEGACY_STORAGE_KEY = "sw-kiewit-theme";
+
+function applyTheme(theme) {
+  const root = document.documentElement;
+  const light = theme === "light";
+  if (light) {
+    root.setAttribute("data-sg-theme", "light");
+  } else {
+    root.removeAttribute("data-sg-theme");
+  }
+  root.style.colorScheme = light ? "light" : "dark";
+  try {
+    localStorage.setItem(STORAGE_KEY, light ? "light" : "dark");
+  } catch {
+    /* private mode */
+  }
+  syncToggleButton();
+}
 
 export function getTheme() {
-  return document.documentElement.getAttribute("data-sg-theme") === "light" ? "light" : "dark";
+  return document.documentElement.getAttribute("data-sg-theme") === "light"
+    ? "light"
+    : "dark";
 }
 
 export function setTheme(theme) {
-  const next = theme === "light" ? "light" : "dark";
-  document.documentElement.setAttribute("data-sg-theme", next);
-  localStorage.setItem(STORAGE_KEY, next);
-  syncToggleButton();
+  applyTheme(theme === "light" ? "light" : "dark");
 }
 
 export function toggleTheme() {
@@ -44,15 +61,39 @@ export function initThemeToggle() {
   else document.addEventListener("DOMContentLoaded", mountToggleButton, {once: true});
 }
 
+function readStoredTheme() {
+  try {
+    let t = localStorage.getItem(STORAGE_KEY);
+    if (t !== "light" && t !== "dark") {
+      t = localStorage.getItem(LEGACY_STORAGE_KEY);
+    }
+    return t === "light" ? "light" : "dark";
+  } catch {
+    return "dark";
+  }
+}
+
 /**
  * Self-contained inline script for observablehq.config head.
- * Avoids module import path issues in dev/build and waits for body.
+ * Runs before paint to avoid flash; mounts toggle after body exists.
  */
 export const themeInitScript = `(function(){
   var K="${STORAGE_KEY}";
+  var L="${LEGACY_STORAGE_KEY}";
   function apply(t){
-    document.documentElement.setAttribute("data-sg-theme",t==="light"?"light":"dark");
-    try{localStorage.setItem(K,t==="light"?"light":"dark");}catch(e){}
+    var root=document.documentElement;
+    var light=t==="light";
+    if(light)root.setAttribute("data-sg-theme","light");
+    else root.removeAttribute("data-sg-theme");
+    root.style.colorScheme=light?"light":"dark";
+    try{localStorage.setItem(K,light?"light":"dark");}catch(e){}
+  }
+  function read(){
+    try{
+      var t=localStorage.getItem(K);
+      if(t!=="light"&&t!=="dark")t=localStorage.getItem(L);
+      return t==="light"?"light":"dark";
+    }catch(e){return "dark";}
   }
   function sync(btn){
     var light=document.documentElement.getAttribute("data-sg-theme")==="light";
@@ -67,13 +108,14 @@ export const themeInitScript = `(function(){
     btn.type="button";
     btn.className="kw-theme-toggle";
     btn.addEventListener("click",function(){
-      apply(document.documentElement.getAttribute("data-sg-theme")==="light"?"dark":"light");
+      var next=document.documentElement.getAttribute("data-sg-theme")==="light"?"dark":"light";
+      apply(next);
       sync(btn);
     });
     document.body.appendChild(btn);
     sync(btn);
   }
-  try{var t=localStorage.getItem(K);if(t==="light")apply("light");}catch(e){}
+  apply(read());
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",mount);
   else mount();
 })();`;

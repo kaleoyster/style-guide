@@ -42,14 +42,17 @@ html[data-sg-theme="light"] {
     --kw-chart-status-review: #171717;
     --kw-chart-status-review-fg: #ffffff;
 
-    --theme-foreground: #1e293b;
-    --theme-background: #f8f9fa;
-    --theme-background-alt: #eef0f2;
-    --theme-foreground-alt: #334155;
-    --theme-foreground-muted: #64748b;
-    --theme-foreground-faint: rgba(0, 0, 0, 0.08);
-    --theme-foreground-fainter: rgba(0, 0, 0, 0.04);
-    --theme-foreground-focus: var(--brand-yellow);
+    /* Beat Observable Framework dark theme (:root) when toggled to light */
+    --theme-foreground: #1e293b !important;
+    --theme-background: #f8f9fa !important;
+    --theme-background-a: #f8f9fa !important;
+    --theme-background-b: #eef0f2 !important;
+    --theme-background-alt: #eef0f2 !important;
+    --theme-foreground-alt: #334155 !important;
+    --theme-foreground-muted: #64748b !important;
+    --theme-foreground-faint: rgba(0, 0, 0, 0.08) !important;
+    --theme-foreground-fainter: rgba(0, 0, 0, 0.04) !important;
+    --theme-foreground-focus: var(--brand-yellow) !important;
 
     --sw-risk-na-bg: #e4e4e4;
     --sw-risk-na-fg: #555555;
@@ -608,32 +611,57 @@ html[data-sg-theme="light"] .ag-table-drawer__nav-item--medium .ag-table-drawer_
 html[data-sg-theme="light"] .ag-table-drawer__nav-item--low .ag-table-drawer__nav-pct { color: var(--sw-risk-low-fg); }
 html[data-sg-theme="light"] .ag-table-drawer__nav-item--very_low .ag-table-drawer__nav-pct { color: var(--sw-risk-very_low-fg); }
 
-.kw-theme-toggle {
-    position: fixed;
-    bottom: 1.25rem;
-    right: 1.25rem;
-    z-index: 100000;
-    appearance: none;
-    border: 1px solid var(--brand-border);
-    border-radius: 999px;
-    background: var(--kw-panel-elevated);
-    color: var(--kw-text-muted);
-    font-family: var(--sans-serif);
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 0.4rem 0.75rem;
-    cursor: pointer;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
-    transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+/* Shared dashboard filters (all .sw-page, not only .jc-page) */
+html[data-sg-theme="light"] .sw-field label,
+html[data-sg-theme="light"] .sw-notes__label,
+html[data-sg-theme="light"] .sw-kpi .k-label {
+    color: #646a6e;
 }
 
-.kw-theme-toggle:hover,
-.kw-theme-toggle[aria-pressed="true"] {
-    border-color: var(--brand-yellow);
-    color: var(--brand-yellow);
-    background: rgba(255, 210, 0, 0.1);
+html[data-sg-theme="light"] .sw-field input,
+html[data-sg-theme="light"] .sw-field select {
+    border-color: #bfc3c1;
+    border-radius: 6px;
+    color: #202325;
+    background: #ffffff;
+}
+
+html[data-sg-theme="light"] .sw-field input::placeholder {
+    color: var(--kw-input-placeholder, #94a3b8);
+}
+
+html[data-sg-theme="light"] .sw-field input:hover,
+html[data-sg-theme="light"] .sw-field select:hover {
+    border-color: #777d80;
+}
+
+html[data-sg-theme="light"] .sw-field input:focus,
+html[data-sg-theme="light"] .sw-field select:focus {
+    border-color: #b89400;
+    box-shadow: 0 0 0 3px rgba(255, 210, 0, 0.2);
+}
+
+html[data-sg-theme="light"] .sw-header {
+    background: var(--kw-panel-elevated);
+    border-color: #b9bdbb;
+    color: var(--kw-text);
+}
+
+html[data-sg-theme="light"] .sw-grid-host .ag-table-container {
+    background: var(--kw-panel-elevated);
+    border-color: #b9bdbb;
+}
+
+html[data-sg-theme="light"] .sw-chip {
+    border-color: #c6cac8;
+    color: #5b6165;
+    background: #f7f8f7;
+}
+
+html[data-sg-theme="light"] .sw-chip--active {
+    border-color: #c6a200;
+    color: #171819;
+    background: #ffd200;
 }
 
 html[data-sg-theme="light"] .kw-theme-toggle {

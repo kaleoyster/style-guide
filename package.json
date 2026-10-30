@@ -7,16 +7,19 @@
   "workspaces": [
     "app"
   ],
+
   "scripts": {
     "dev": "npm run dev -w app",
     "build:app": "npm run build -w app"
   },
+
   "files": [
     "css",
     "docs",
     "js",
     "tokens"
   ],
+
   "exports": {
     "./variables.css": "./css/variables.css",
     "./css/variables.css": "./css/variables.css",

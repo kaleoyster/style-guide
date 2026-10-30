@@ -362,3 +362,32 @@ footer nav a[rel="prev"] {
     text-align: left;
     align-items: flex-start;
 }
+
+/* Theme toggle (dark default; light overrides in brand-theme-light.css) */
+.kw-theme-toggle {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    z-index: 100000;
+    appearance: none;
+    border: 1px solid var(--brand-border);
+    border-radius: 999px;
+    background: var(--kw-panel-elevated);
+    color: var(--kw-text-muted);
+    font-family: var(--sans-serif);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.75rem;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+    transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.kw-theme-toggle:hover,
+.kw-theme-toggle[aria-pressed="true"] {
+    border-color: var(--brand-yellow);
+    color: var(--brand-yellow);
+    background: rgba(255, 210, 0, 0.1);
+}

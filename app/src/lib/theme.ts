@@ -1,4 +1,5 @@
 const STORAGE_KEY = "sw-sg-theme";
+const LEGACY_STORAGE_KEY = "sw-kiewit-theme";
 
 export type ThemeMode = "light" | "dark";
 
@@ -9,14 +10,16 @@ export function getTheme(): ThemeMode {
 }
 
 export function setTheme(theme: ThemeMode) {
-  const next = theme === "light" ? "light" : "dark";
-  if (next === "light") {
-    document.documentElement.setAttribute("data-sg-theme", "light");
+  const root = document.documentElement;
+  const light = theme === "light";
+  if (light) {
+    root.setAttribute("data-sg-theme", "light");
   } else {
-    document.documentElement.removeAttribute("data-sg-theme");
+    root.removeAttribute("data-sg-theme");
   }
+  root.style.colorScheme = light ? "light" : "dark";
   try {
-    localStorage.setItem(STORAGE_KEY, next);
+    localStorage.setItem(STORAGE_KEY, light ? "light" : "dark");
   } catch {
     /* private mode */
   }
@@ -24,9 +27,12 @@ export function setTheme(theme: ThemeMode) {
 
 export function applyStoredTheme() {
   try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === "light") setTheme("light");
+    let stored = localStorage.getItem(STORAGE_KEY);
+    if (stored !== "light" && stored !== "dark") {
+      stored = localStorage.getItem(LEGACY_STORAGE_KEY);
+    }
+    setTheme(stored === "light" ? "light" : "dark");
   } catch {
-    /* ignore */
+    setTheme("dark");
   }
 }
